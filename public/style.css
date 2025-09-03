@@ -41,7 +41,8 @@ label {
     color: #99aab5;
 }
 
-input[type="text"], select {
+input[type="text"],
+select {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #4f545c;
@@ -50,7 +51,8 @@ input[type="text"], select {
     font-size: 16px;
 }
 
-input[type="text"]:focus, select:focus {
+input[type="text"]:focus,
+select:focus {
     outline: none;
     border-color: #7289da;
 }
@@ -71,11 +73,13 @@ button:hover {
     background-color: #5b6eae;
 }
 
-#player-info, #heatmap-container {
+#player-info,
+#heatmap-container {
     margin-top: 30px;
 }
 
-#player-info h2, #heatmap-container h2 {
+#player-info h2,
+#heatmap-container h2 {
     color: #99aab5;
     border-bottom: 2px solid #4f545c;
     padding-bottom: 10px;
@@ -87,18 +91,19 @@ button:hover {
     line-height: 1.6;
 }
 
-#info-bpm, #info-velocidade {
+#info-bpm,
+#info-velocidade {
     color: #43b581;
     font-weight: bold;
 }
 
 .heatmap-bg {
     background-image: url('campo_futebol.jpg');
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 612px; 
-    height: 453px; 
+    width: 612px;
+    height: 453px;
     position: relative;
 
 }
@@ -107,7 +112,7 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: transparent; 
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
 }

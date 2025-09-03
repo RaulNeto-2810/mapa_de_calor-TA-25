@@ -16,7 +16,7 @@ const imageHeight = 453;
 const fieldWidth = 100;
 const fieldHeight = (fieldWidth / imageWidth) * imageHeight;
 
-canvas.width = imageWidth; 
+canvas.width = imageWidth;
 canvas.height = imageHeight;
 
 const heatmap = simpleheat('heatmapCanvas');
@@ -31,14 +31,14 @@ function processPlayerData(data) {
 
     const x = (data.posicao_x / fieldWidth) * canvas.width;
     const y = (data.posicao_y / fieldHeight) * canvas.height;
-    
+
     heatPoints.push([x, y, 100]);
-    
+
     if (heatPoints.length > 500) {
         heatPoints.shift();
     }
-    
-    ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     heatmap.data(heatPoints).draw();
 }
 
@@ -48,7 +48,7 @@ function startTracking(query) {
     playerInfoDiv.style.display = "block";
     heatmapContainerDiv.style.display = "block";
     infoNome.textContent = query.jogador;
-    
+
     socket.emit("searchPlayer", query);
 }
 
@@ -98,7 +98,7 @@ selectJogo.addEventListener('change', () => {
 
 playerForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
     const query = {
         liga: selectLiga.value,
         time: selectTime.value,

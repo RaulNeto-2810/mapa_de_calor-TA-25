@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreamento de Jogadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rastreamento de Jogadores</h1>
+
+        <div class="search-container">
+            <h2>Pesquisar Jogador</h2>
+            <form id="playerForm">
+                <label for="liga">Liga:</label>
+                <select id="liga" name="liga" required>
+                    <option value="">Selecione...</option>
+                </select>
+                
+                <label for="time">Time:</label>
+                <select id="time" name="time" required>
+                    <option value="">Selecione...</option>
+                </select>
+                
+                <label for="jogo">Jogo:</label>
+                <select id="jogo" name="jogo" required>
+                    <option value="">Selecione...</option>
+                </select>
+                
+                <label for="jogador">Jogador:</label>
+                <select id="jogador" name="jogador" required>
+                    <option value="">Selecione...</option>
+                </select>
+
+                <button type="submit">Rastrear Jogador</button>
+            </form>
+        </div>
+
+        <div id="player-info" style="display: none;">
+            <h2>Informações do Jogador</h2>
+            <p><strong>Nome:</strong> <span id="info-nome"></span></p>
+            <p><strong>BPM:</strong> <span id="info-bpm"></span></p>
+            <p><strong>Velocidade:</strong> <span id="info-velocidade"></span></p>
+        </div>
+
+        <div id="heatmap-container" style="display: none;">
+            <h2>Mapa de Calor</h2>
+            <div class="heatmap-bg">
+                <canvas id="heatmapCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/simpleheat@0.4.0/simpleheat.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
